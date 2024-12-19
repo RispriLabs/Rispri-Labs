@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Contact Rispri Labs - Your trusted partner in quality testing and innovative solutions.">
     <title>Contact Us - Rispri Labs</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
         :root {
             --primary-color: #004080;
@@ -15,6 +16,7 @@
             --background-dark: #001a33;
             --card-shadow: rgba(0, 0, 0, 0.2);
         }
+    
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
@@ -23,6 +25,7 @@
             background-color: var(--background-light);
             line-height: 1.8;
         }
+    
         header {
             background-image: url('https://t4.ftcdn.net/jpg/03/95/04/15/360_F_395041586_h21AxqD0dNjxUw3lKFiV5t7qMBJs6wfe.jpg');
             background-size: cover;
@@ -31,19 +34,23 @@
             text-align: center;
             padding: 60px 20px;
         }
+    
         header h1 {
             font-size: 3rem;
             margin-bottom: 10px;
         }
+    
         header p {
             font-size: 1.5rem;
         }
+    
         nav {
             display: flex;
             justify-content: center;
             background-color: var(--primary-color);
             padding: 10px 0;
         }
+    
         nav a {
             color: var(--text-color);
             text-decoration: none;
@@ -51,10 +58,12 @@
             font-weight: bold;
             text-transform: uppercase;
         }
+    
         nav a:hover {
             background-color: var(--accent-color);
             border-radius: 4px;
         }
+    
         .contact-container {
             padding: 40px 20px;
             max-width: 800px;
@@ -63,24 +72,29 @@
             box-shadow: 0 4px 6px var(--card-shadow);
             border-radius: 8px;
         }
+    
         .contact-container h2 {
             text-align: center;
             color: var(--primary-color);
             margin-bottom: 20px;
         }
+    
         .contact-container p {
             text-align: center;
             margin-bottom: 20px;
         }
+    
         .contact-form {
             display: flex;
             flex-direction: column;
         }
+    
         .contact-form label {
             margin-bottom: 8px;
             color: var(--secondary-color);
             font-weight: bold;
         }
+    
         .contact-form input,
         .contact-form textarea,
         .contact-form button {
@@ -90,19 +104,23 @@
             border-radius: 4px;
             font-size: 1rem;
         }
+    
         .contact-form textarea {
             resize: vertical;
             height: 100px;
         }
+    
         .contact-form button {
             background-color: var(--primary-color);
             color: var(--text-color);
             cursor: pointer;
             transition: background-color 0.3s ease-in-out;
         }
+    
         .contact-form button:hover {
             background-color: var(--accent-color);
         }
+    
         footer {
             background-color: var(--primary-color);
             color: var(--text-color);
@@ -110,10 +128,80 @@
             padding: 20px;
             margin-top: 40px;
         }
+    
         footer p {
             margin: 0;
         }
-    </style>
+    
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 15px;
+            }
+    
+            header h1 {
+                font-size: 2rem;
+            }
+    
+            header p {
+                font-size: 1rem;
+            }
+    
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+    
+            nav a {
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
+    
+            .contact-container {
+                padding: 20px 10px;
+                margin: 20px auto;
+            }
+    
+            .contact-container h2 {
+                font-size: 1.8rem;
+            }
+    
+            .contact-form input,
+            .contact-form textarea,
+            .contact-form button {
+                font-size: 0.9rem;
+            }
+        }
+    
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+    
+            header p {
+                font-size: 0.9rem;
+            }
+    
+            nav a {
+                padding: 5px 10px;
+                font-size: 0.8rem;
+            }
+    
+            .contact-container h2 {
+                font-size: 1.5rem;
+            }
+    
+            .contact-form input,
+            .contact-form textarea,
+            .contact-form button {
+                font-size: 0.8rem;
+            }
+    
+            footer p {
+                font-size: 0.8rem;
+            }
+        }
+    </style>    
     <script>
         function sendMail() {
             const name = document.getElementById('name').value;
