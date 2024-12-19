@@ -16,6 +16,7 @@
             --background-dark: #001a33;
             --card-shadow: rgba(0, 0, 0, 0.2);
         }
+    
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
@@ -24,6 +25,7 @@
             background-color: var(--background-light);
             line-height: 1.8;
         }
+    
         header {
             background-image: url('https://content.jdmagicbox.com/comp/agra/i4/0562px562.x562.100906002902.i1i4/catalogue/ram-chemicals-enterprises-sikandra-agra-chemical-manufacturers-53as4xp.jpg');
             background-size: cover;
@@ -32,19 +34,23 @@
             text-align: center;
             padding: 60px 20px;
         }
+    
         header h1 {
             font-size: 3rem;
             margin-bottom: 10px;
         }
+    
         header p {
             font-size: 1.5rem;
         }
+    
         nav {
             display: flex;
             justify-content: center;
             background-color: var(--primary-color);
             padding: 10px 0;
         }
+    
         nav a {
             color: var(--text-color);
             text-decoration: none;
@@ -52,17 +58,21 @@
             font-weight: bold;
             text-transform: uppercase;
         }
+    
         nav a:hover {
             background-color: var(--accent-color);
             border-radius: 4px;
         }
+    
         .content {
             padding: 40px 20px;
         }
+    
         .content h2 {
             color: var(--primary-color);
             text-align: center;
         }
+    
         .mission-vision {
             display: flex;
             flex-direction: column;
@@ -71,6 +81,7 @@
             margin: 30px auto;
             max-width: 800px;
         }
+    
         .card {
             background-color: var(--background-light);
             border: 1px solid var(--accent-color);
@@ -81,13 +92,16 @@
             transition: transform 0.3s, box-shadow 0.3s;
             width: 100%;
         }
+    
         .card:hover {
             transform: translateY(-10px);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
         }
+    
         .card h3 {
             color: var(--secondary-color);
         }
+    
         footer {
             background-color: var(--primary-color);
             color: var(--text-color);
@@ -95,10 +109,62 @@
             padding: 20px;
             margin-top: 40px;
         }
+    
         footer p {
             margin: 0;
         }
-    </style>
+    
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 15px;
+            }
+    
+            header h1 {
+                font-size: 2rem;
+            }
+    
+            header p {
+                font-size: 1rem;
+            }
+    
+            nav {
+                flex-direction: column;
+                align-items: center;
+                padding: 10px;
+            }
+    
+            nav a {
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
+    
+            .content {
+                padding: 20px 10px;
+            }
+    
+            .mission-vision {
+                max-width: 100%;
+                padding: 0 10px;
+            }
+    
+            .card {
+                padding: 15px;
+            }
+    
+            .card h3 {
+                font-size: 1.2rem;
+            }
+    
+            footer {
+                padding: 15px;
+            }
+    
+            footer p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>    
 </head>
 <body>
     <header>
