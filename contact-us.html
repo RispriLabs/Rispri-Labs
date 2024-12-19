@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Rispri Labs - Your trusted partner in quality testing and innovative solutions.">
+    <title>Contact Us - Rispri Labs</title>
+    <style>
+        :root {
+            --primary-color: #004080;
+            --accent-color: #00bfff;
+            --secondary-color: #00264d;
+            --text-color: #ffffff;
+            --background-light: #f4f4f4;
+            --background-dark: #001a33;
+            --card-shadow: rgba(0, 0, 0, 0.2);
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--secondary-color);
+            background-color: var(--background-light);
+            line-height: 1.8;
+        }
+        header {
+            background-image: url('https://t4.ftcdn.net/jpg/03/95/04/15/360_F_395041586_h21AxqD0dNjxUw3lKFiV5t7qMBJs6wfe.jpg');
+            background-size: cover;
+            background-position: center;
+            color: var(--text-color);
+            text-align: center;
+            padding: 60px 20px;
+        }
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.5rem;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: var(--primary-color);
+            padding: 10px 0;
+        }
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        nav a:hover {
+            background-color: var(--accent-color);
+            border-radius: 4px;
+        }
+        .contact-container {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 30px auto;
+            background-color: var(--background-light);
+            box-shadow: 0 4px 6px var(--card-shadow);
+            border-radius: 8px;
+        }
+        .contact-container h2 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        .contact-container p {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact-form label {
+            margin-bottom: 8px;
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form button {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid var(--accent-color);
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        .contact-form textarea {
+            resize: vertical;
+            height: 100px;
+        }
+        .contact-form button {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .contact-form button:hover {
+            background-color: var(--accent-color);
+        }
+        footer {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        footer p {
+            margin: 0;
+        }
+    </style>
+    <script>
+        function sendMail() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            const subject = `Contact from ${name}`;
+            const body = `Message:\n${message}`;
+
+            const mailtoLink = `mailto:risprilaboratory@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            window.location.href = mailtoLink;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you. Reach out to us for inquiries or support.</p>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="rispri-laboratory.html">Rispri Laboratory</a>
+        <a href="ram-chemical-enterprises.html">Ram Chemical Enterprises</a>
+        <a href="contact-us.html">Contact Us</a>
+    </nav>
+    <div class="contact-container">
+        <h2>Get in Touch</h2>
+        <p>If you have any questions or require support, please fill out the form below. When you submit, your email client will open with the details pre-filled.</p>
+        <div class="form-container">
+            <form class="contact-form" onsubmit="sendMail(); return false;">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+    
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="6" placeholder="Enter your message" required></textarea>
+    
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Rispri Labs - All Rights Reserved</p>
+    </footer>
+</body>
+</html>
