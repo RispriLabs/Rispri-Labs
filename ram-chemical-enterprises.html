@@ -147,31 +147,60 @@
         footer p {
             margin: 0;
         }
-    
-        /* Responsive Design */
+
+        /* Responsive Styles */
         @media (max-width: 768px) {
-            header {
-                padding: 40px 15px;
-            }
-    
-            header h1 {
-                font-size: 2rem;
-            }
-    
-            header p {
-                font-size: 1rem;
-            }
-    
-            nav {
-                flex-direction: column;
+            .top-bar {
+                flex-direction: row;
+                justify-content: space-between;
                 align-items: center;
             }
-    
-            nav a {
-                padding: 8px 15px;
-                font-size: 0.9rem;
+        
+            /* Hamburger Menu */
+            .hamburger {
+                display: block;
+                cursor: pointer;
             }
-    
+        
+            .hamburger div {
+                width: 25px;
+                height: 3px;
+                background-color: var(--primary-color);
+                margin: 5px 0;
+                transition: 0.4s;
+            }
+        
+            /* Hidden nav by default */
+            nav {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 10px;
+                background-color: #ffffff;
+                box-shadow: 0 4px 6px var(--card-shadow);
+                border-radius: 8px;
+                padding: 10px;
+                z-index: 1000;
+            }
+        
+            nav a {
+                font-size: 0.9rem;
+                padding: 10px 15px;
+                text-align: right;
+                color: var(--primary-color);
+                display: block;
+            }
+        
+            nav a:hover {
+                background-color: var(--accent-color);
+                color: #ffffff;
+            }
+        
+            .nav-active {
+                display: flex;
+            }
+
             .content {
                 padding: 20px 10px;
             }
@@ -197,22 +226,19 @@
                 font-size: 0.9rem;
             }
         }
+        
         @media (max-width: 480px) {
-            header h1 {
-                font-size: 2rem;
+            .company-name {
+                font-size: 1.2rem;
             }
-    
-            header p {
-                font-size: 1rem;
-            }
-    
-            nav a {
-                padding: 5px 10px;
-                font-size: 0.8rem;
-            }
-    
+        
             .card {
                 padding: 10px;
+            }
+        
+            nav a {
+                font-size: 0.8rem;
+                padding: 8px 12px;
             }
         }
     </style>    
@@ -224,6 +250,13 @@
             <img src="your-logo.png" alt="Rispri Logo" class="logo-img">
             <span class="company-name">Rispri Labs</span>
         </div>
+        <!-- Hamburger Icon -->
+        <div class="hamburger" onclick="toggleNav()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <!-- Navigation Links -->
         <nav>
             <a href="index.html">Home</a>
             <a href="rispri-laboratory.html">Rispri Laboratory</a>
@@ -237,7 +270,7 @@
         <p>Innovating Water Treatment Solutions Since 1999</p>
     </header>
     <div class="header-image"></div>
-    
+
     <section class="content">
         <h2>About Us</h2>
         <p>Established in the year 1999, Ram Chemical Enterprises is a trusted leader in water treatment solutions and commercial systems. We specialize in Water Treatment Systems, Commercial RO Plants, Waterproofing Chemicals, and more, consistently delivering quality and innovation to our clients.</p>
@@ -281,5 +314,12 @@
     <footer>
         <p>&copy; 2024 Ram Chemical Enterprises - All Rights Reserved</p>
     </footer>
+
+    <script>
+        function toggleNav() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('nav-active');
+        }
+    </script>
 </body>
 </html>
