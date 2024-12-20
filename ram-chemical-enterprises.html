@@ -25,43 +25,77 @@
             background-color: var(--background-light);
             line-height: 1.8;
         }
-    
+
+        /* Top Bar */
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff; /* White background */
+            color: var(--primary-color);
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px var(--card-shadow);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-img {
+            height: 40px;
+            width: auto;
+            margin-right: 10px; /* Space between logo and text */
+        }
+
+        .company-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            color: var(--primary-color); /* Theme blue */
+            text-decoration: none;
+            padding: 8px 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 4px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            background-color: var(--accent-color);
+            color: #ffffff; /* White text on hover */
+        }
+
+        /* Header Section */
         header {
+            position: relative;
+            height: 300px;
             background-image: url('https://content.jdmagicbox.com/comp/agra/i4/0562px562.x562.100906002902.i1i4/catalogue/ram-chemicals-enterprises-sikandra-agra-chemical-manufacturers-53as4xp.jpg');
             background-size: cover;
             background-position: center;
             color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             text-align: center;
-            padding: 60px 20px;
         }
-    
+
         header h1 {
             font-size: 3rem;
             margin-bottom: 10px;
         }
-    
+
         header p {
             font-size: 1.5rem;
-        }
-    
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: var(--primary-color);
-            padding: 10px 0;
-        }
-    
-        nav a {
-            color: var(--text-color);
-            text-decoration: none;
-            padding: 10px 20px;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-    
-        nav a:hover {
-            background-color: var(--accent-color);
-            border-radius: 4px;
         }
     
         .content {
@@ -184,16 +218,26 @@
     </style>    
 </head>
 <body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="logo">
+            <img src="your-logo.png" alt="Rispri Logo" class="logo-img">
+            <span class="company-name">Rispri Labs</span>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="rispri-laboratory.html">Rispri Laboratory</a>
+            <a href="ram-chemical-enterprises.html">Ram Chemical Enterprises</a>
+            <a href="contact-us.html">Contact Us</a>
+        </nav>
+    </div>
+
     <header>
         <h1>Ram Chemical Enterprises</h1>
         <p>Innovating Water Treatment Solutions Since 1999</p>
     </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="rispri-laboratory.html">Rispri Laboratory</a>
-        <a href="ram-chemical-enterprises.html">Ram Chemical Enterprises</a>
-        <a href="contact-us.html">Contact Us</a>
-    </nav>
+    <div class="header-image"></div>
+    
     <section class="content">
         <h2>About Us</h2>
         <p>Established in the year 1999, Ram Chemical Enterprises is a trusted leader in water treatment solutions and commercial systems. We specialize in Water Treatment Systems, Commercial RO Plants, Waterproofing Chemicals, and more, consistently delivering quality and innovation to our clients.</p>
@@ -216,6 +260,23 @@
             <li>Dedicated customer support</li>
             <li>Affordable and reliable solutions</li>
         </ul>
+    </section>
+    <section class="content">
+        <h2>Our Services</h2>
+        <div class="services">
+            <div class="card">
+                <h3>Water Treatment Systems</h3>
+                <p>Advanced water treatment systems for residential and commercial use.</p>
+            </div>
+            <div class="card">
+                <h3>Commercial RO Plants</h3>
+                <p>Customized RO plants for commercial and industrial applications.</p>
+            </div>
+            <div class="card">
+                <h3>Waterproofing Chemicals</h3>
+                <p>High-quality waterproofing chemicals for construction and infrastructure.</p>
+            </div>
+        </div>
     </section>
     <footer>
         <p>&copy; 2024 Ram Chemical Enterprises - All Rights Reserved</p>
