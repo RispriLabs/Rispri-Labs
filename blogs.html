@@ -149,6 +149,76 @@
         footer p {
             margin: 0;
         }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        .top-bar {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+        /* Hamburger Menu */
+        .hamburger {
+            display: block;
+            cursor: pointer;
+        }
+    
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: var(--primary-color);
+            margin: 5px 0;
+            transition: 0.4s;
+        }
+    
+        /* Hidden nav by default */
+        nav {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            right: 10px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px var(--card-shadow);
+            border-radius: 8px;
+            padding: 10px;
+            z-index: 1000;
+        }
+    
+        nav a {
+            font-size: 0.9rem;
+            padding: 10px 15px;
+            text-align: right;
+            color: var(--primary-color);
+            display: block;
+        }
+    
+        nav a:hover {
+            background-color: var(--accent-color);
+            color: #ffffff;
+        }
+    
+        .nav-active {
+            display: flex;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .company-name {
+            font-size: 1.2rem;
+        }
+    
+        .card {
+            padding: 10px;
+        }
+    
+        nav a {
+            font-size: 0.8rem;
+            padding: 8px 12px;
+        }
+    }
+    
     </style>
 </head>
 <body>
