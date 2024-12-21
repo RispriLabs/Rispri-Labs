@@ -434,6 +434,72 @@
         }
     }
 
+    /* Lower Tab */
+    .carousel-lower-tab {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .bar-container {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .bar {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: #e0e0e0;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .bar.active {
+        background-color: var(--primary-color);
+    }
+
+    .product-titles {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .product-titles .title {
+        font-size: 1rem;
+        color: var(--secondary-color);
+        cursor: pointer;
+        transition: color 0.3s ease-in-out;
+        padding: 5px 10px;
+        border-radius: 4px;
+    }
+
+    .product-titles .title.active {
+        font-weight: bold;
+        color: var(--primary-color);
+        background-color: var(--accent-color);
+        color: #ffffff;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+        .product-titles {
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .bar-container {
+            gap: 5px;
+        }
+
+        .bar {
+            width: 10px;
+            height: 10px;
+        }
+    }
+
     </style>
 </head>
 <!-- Google tag (gtag.js) -->
@@ -448,7 +514,7 @@
 <body>
     <div class="top-bar">
         <div class="logo">
-            <img src="your-logo.png" alt="Rispri Logo" class="logo-img">
+            <img src="assets/your-logo.png" alt="Rispri Logo" class="logo-img">
             <span class="company-name">Rispri Labs</span>
         </div>
         <!-- Hamburger Icon -->
@@ -539,22 +605,18 @@
                 &#9654;
             </div>
         </div>
-    </section>
-
-    <section class="content">
-        <h2>Our Customers</h2>
-        <div class="customers">
-            <div class="card">
-                <h3>Industrial Clients</h3>
-                <p>Providing solutions for industries like textiles, pharmaceuticals, and power generation.</p>
+    
+        <!-- Lower Tab with Bars and Product Titles -->
+        <div class="carousel-lower-tab">
+            <div class="bar-container">
+                <span class="bar active" onclick="goToProduct(0)"></span>
+                <span class="bar" onclick="goToProduct(1)"></span>
+                <span class="bar" onclick="goToProduct(2)"></span>
             </div>
-            <div class="card">
-                <h3>Commercial Clients</h3>
-                <p>Supporting hotels, hospitals, and malls with advanced water treatment systems.</p>
-            </div>
-            <div class="card">
-                <h3>Residential Projects</h3>
-                <p>Delivering eco-friendly solutions for apartments, complexes, and homes.</p>
+            <div class="product-titles">
+                <span class="title active" onclick="goToProduct(0)">Water Treatment Systems</span>
+                <span class="title" onclick="goToProduct(1)">Commercial RO Plants</span>
+                <span class="title" onclick="goToProduct(2)">Waterproofing Chemicals</span>
             </div>
         </div>
     </section>
@@ -592,7 +654,6 @@
     </script>
 
     <script>
-        // Product Data
         const products = [
             {
                 title: "Water Treatment Systems",
@@ -612,31 +673,47 @@
         ];
     
         let currentIndex = 0;
-    
-        // Update Carousel Display
+        const bars = document.querySelectorAll(".bar");
+        const titles = document.querySelectorAll(".title");
+
         function updateCarousel() {
             const productTitle = document.getElementById("product-title");
             const productDescription = document.getElementById("product-description");
             const productImage = document.querySelector(".carousel-image img");
-    
+
             productTitle.textContent = products[currentIndex].title;
             productDescription.textContent = products[currentIndex].description;
             productImage.src = products[currentIndex].image;
             productImage.alt = products[currentIndex].title;
+
+            bars.forEach((bar, index) => {
+                bar.classList.toggle("active", index === currentIndex);
+            });
+
+            titles.forEach((title, index) => {
+                title.classList.toggle("active", index === currentIndex);
+            });
         }
-    
+
         function nextProduct() {
             currentIndex = (currentIndex + 1) % products.length;
             updateCarousel();
         }
-    
+
         function prevProduct() {
             currentIndex = (currentIndex - 1 + products.length) % products.length;
             updateCarousel();
         }
-    
-        // Automatic Image Change (every 5 seconds)
-        setInterval(nextProduct, 5000); // 5000 milliseconds = 5 seconds
+
+        function goToProduct(index) {
+            currentIndex = index;
+            updateCarousel();
+        }
+
+        // Auto-Slide
+        setInterval(() => {
+            nextProduct();
+        }, 5000); // 5 seconds per slide
     </script>
     
 
