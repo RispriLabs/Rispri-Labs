@@ -28,6 +28,9 @@
 
         /* Top Bar */
         .top-bar {
+            position: sticky; /* Makes the navbar stick to the top */
+            top: 0; /* Ensures it sticks at the top of the viewport */
+            z-index: 1000; /* Keeps it above other elements */
             display: flex;
             justify-content: space-between;
             align-items: center;
