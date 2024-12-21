@@ -16,6 +16,7 @@
             --background-dark: #001a33;
             --background-midshade: #c6ebf5;
             --card-shadow: rgba(0, 0, 0, 0.2);
+            --footer-background: #001a33;
         }
 
         body {
@@ -137,16 +138,59 @@
             color: var(--secondary-color);
         }
 
+        .footer-links {
+            background-color: var(--footer-background); /* Footer background color */
+            color: var(--text-color);
+            padding: 40px 20px;
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid var(--card-shadow);
+            margin-bottom: 0; /* Remove white space */
+            flex-wrap: wrap; /* Allow wrapping for mobile */
+        }
+
+        .footer-links .links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .footer-links .links a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .footer-links .links a:hover {
+            color: var(--accent-color);
+        }
+
         footer {
             background-color: var(--primary-color);
             color: var(--text-color);
             text-align: center;
             padding: 20px;
-            margin-top: 40px;
+            margin-top: 0; /* Remove white space */
         }
 
         footer p {
             margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .footer-links {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            }
+
+            .footer-links .links {
+            align-items: center;
+            }
+
+            .footer-links div {
+            margin-bottom: 20px;
+            }
         }
 
         /* Counter Section */
@@ -518,7 +562,7 @@
     <div class="top-bar">
         <div class="logo">
             <img src="assets/your-logo.png" alt="Rispri Logo" class="logo-img">
-            <span class="company-name">Rispri Labs</span>
+            <span class="company-name" onclick="window.location.href='index.html'" style="cursor: pointer;">Rispri Labs</span>
         </div>
         <!-- Hamburger Icon -->
         <div class="hamburger" onclick="toggleNav()">
@@ -630,6 +674,31 @@
             </div>
         </div>
     </section>
+
+    <div class="footer-links">
+        <h3>Quick Links</h3>
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="rispri-laboratory.html">Rispri Laboratory</a>
+            <a href="ram-chemical-enterprises.html">Ram Chemical Enterprises</a>
+            <a href="aboutus.html">Our Journey</a>
+            <a href="blogs.html">Blogs</a>
+            <a href="contact-us.html">Contact Us</a>
+        </div>
+        <h3>Follow Us</h3>
+        <div class="links">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Instagram</a>
+        </div>
+        <div style="text-align: right;">
+            <h3>Contact Us</h3>
+            <p>43/478/39 Radha Nagar, Sikandra, Agra, Uttar Pradesh - 282007</p>
+            <p>Email: risprilaboratory@gmail.com</p>
+            <p>Phone: +91-7302421148</p>
+        </div>
+    </div>
 
     <footer>
         <p>&copy; 2024 Ram Chemical Enterprises - All Rights Reserved</p>
