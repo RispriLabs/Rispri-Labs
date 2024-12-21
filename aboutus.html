@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Our Journey - Learn how Rispri Labs was built to deliver excellence in testing and solutions.">
+    <title>Our Journey - Rispri Labs</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --primary-color: #004080;
+            --accent-color: #00bfff;
+            --secondary-color: #00264d;
+            --text-color: #ffffff;
+            --background-light: #f4f4f4;
+            --background-dark: #001a33;
+            --card-shadow: rgba(0, 0, 0, 0.2);
+        }
+    
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--secondary-color);
+            background-color: var(--background-light);
+            line-height: 1.8;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            position: sticky; /* Makes the navbar stick to the top */
+            top: 0; /* Ensures it sticks at the top of the viewport */
+            z-index: 1000; /* Keeps it above other elements */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff; /* White background */
+            color: var(--primary-color);
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px var(--card-shadow);
+        }
+
+        /* Logo Section */
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-img {
+            height: 40px;
+            width: auto;
+            margin-right: 10px; /* Space between logo and text */
+        }
+
+        .company-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            color: var(--primary-color); /* Theme blue */
+            text-decoration: none;
+            padding: 8px 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 4px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            background-color: var(--accent-color);
+            color: #ffffff; /* White text on hover */
+        }
+
+        header {
+            text-align: center;
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        .content {
+            padding: 40px 20px;
+        }
+
+        .content h2 {
+            color: var(--primary-color);
+            text-align: center;
+        }
+
+        .timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .timeline-event {
+            margin-bottom: 20px;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 20px;
+        }
+
+        .timeline-event h3 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .timeline-event p {
+            margin: 5px 0;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+    </style>
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LH35MN9R84"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LH35MN9R84');
+</script>
+<body>
+    <div class="top-bar">
+        <div class="logo">
+            <img src="assets/your-logo.png" alt="Rispri Logo" class="logo-img">
+            <span class="company-name">Rispri Labs</span>
+        </div>
+        <!-- Hamburger Icon -->
+        <div class="hamburger" onclick="toggleNav()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <!-- Navigation Links -->
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="rispri-laboratory.html">Rispri Laboratory</a>
+            <a href="ram-chemical-enterprises.html">Ram Chemical Enterprises</a>
+            <a href="aboutus.html">Our Journey</a>
+            <a href="blogs.html">Blogs</a>
+            <a href="contact-us.html">Contact Us</a>
+        </nav>
+    </div>
+
+    <!-- Our Journey Page -->
+    <header>
+        <h1>Our Journey</h1>
+        <p>The story of building Rispri Labs, a trusted partner in testing and solutions.</p>
+    </header>
+
+    <section class="content">
+        <h2>How It All Began</h2>
+        <div class="timeline">
+            <div class="timeline-event">
+                <h3>1999 - Foundation</h3>
+                <p>Ram Chemical Enterprises was established to provide water treatment solutions.</p>
+            </div>
+            <div class="timeline-event">
+                <h3>2023 - The Birth of Rispri Labs</h3>
+                <p>Recognizing the need for reliable testing services, Rispri Labs was founded to expand into laboratory testing and calibration services.</p>
+            </div>
+            <div class="timeline-event">
+                <h3>2024 - Building an Online Ecosystem</h3>
+                <p>We launched our online platform to make testing services accessible and streamlined for our clients.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Rispri Labs - All Rights Reserved</p>
+    </footer>
+</body>
+</html>
