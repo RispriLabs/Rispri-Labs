@@ -200,6 +200,21 @@
             border-radius: 5px;
         }
 
+        @media (max-width: 768px) {
+            .about-us {
+            flex-direction: column;
+            text-align: center;
+            }
+
+            .about-us img, .about-us .content {
+            width: 100%;
+            }
+
+            .about-us img {
+            margin-bottom: 20px;
+            }
+        }
+
         /* MISSION SECTION */
         .mission {
             text-align: center;
@@ -473,13 +488,20 @@
             <h2>About Us</h2>
             <p>At Rispri Labs, we are committed to building a trusted brand that serves as a cornerstone for sustainable and environment-friendly solutions. With a vision to empower industries and organizations, we operate through two distinct verticals:</p>
             <ul>
-                <li><strong>Rispri Laboratory:</strong> Specializing in precise testing and analysis services for water, food, soil, and industrial materials.</li>
-                <li><strong>Ram Chemical Enterprises:</strong> Delivering innovative water treatment solutions and sustainable systems to address environmental challenges.</li>
+            <li><strong>Rispri Laboratory:</strong> Specializing in precise testing and analysis services for water, food, soil, and industrial materials.</li>
+            <li><strong>Ram Chemical Enterprises:</strong> Delivering innovative water treatment solutions and sustainable systems to address environmental challenges.</li>
             </ul>
             <p>At Rispri Labs, every solution we offer is a step towards a <strong>greener, cleaner, and more sustainable future</strong>. Together, we aim to create a world where environmental responsibility and industrial growth go hand in hand.</p>
             <p><strong style="color: var(--primary-color);">Let Rispri Labs be your partner in building a sustainable tomorrow.</strong></p>
             <a href="aboutus.html">Learn More</a>
         </div>
+        <style>
+            @media (max-width: 768px) {
+            .about-us .content {
+                text-align: left;
+            }
+            }
+        </style>
     </section>
 
     <!-- MISSION SECTION -->
