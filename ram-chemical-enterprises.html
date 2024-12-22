@@ -15,9 +15,13 @@
             --text-color: #ffffff;
             --background-light: #f4f4f4;
             --background-dark: #001a33;
-            --background-midshade: #c6ebf5;
+            --background-midshade: #91b2d8;
             --card-shadow: rgba(0, 0, 0, 0.2);
             --footer-background: #001a33;
+            --primary-light: #6e8af7;
+            --primary-dark: #3a54c7;
+            --highlight-color: #f0b429;
+            --success-color: #28a745;
         }
 
         body {
@@ -225,6 +229,27 @@
             transition: transform 0.3s;
         }
 
+        .counter-card-n1 {
+            background-color: var(--primary-light);
+        }
+
+        .counter-card-n2 {
+            background-color: var(--highlight-color);
+        }
+
+        .counter-card-n3 {
+            background-color: var(--success-color);
+        }
+
+        .counter-card-n4 {
+            background-color: var(--accent-color);
+        }
+
+        .counter-card h2 {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+
         .counter-card h3 {
             font-size: 3rem;
             margin: 10px 0;
@@ -244,13 +269,10 @@
             font-size: 2rem;
         }
 
-        .counter-card h3 {
-            font-size: 2.5rem;
-        }
-
         .counter-card p {
             font-size: 1rem;
         }
+        
     }
 
 
@@ -552,6 +574,21 @@
         }
     }
 
+    .equipment-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+        margin-top: 20px;
+    }
+    .equipment-item {
+        background-color: var(--primary-light);
+        padding: 15px;
+        border: 1px solid var(--primary-light);
+        border-radius: 5px;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
     </style>
 </head>
 <!-- Google tag (gtag.js) -->
@@ -676,6 +713,44 @@
                 <span class="title active" onclick="goToProduct(0)">Water Treatment Systems</span>
                 <span class="title" onclick="goToProduct(1)">Commercial RO Plants</span>
                 <span class="title" onclick="goToProduct(2)">Waterproofing Chemicals</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="quality-assurance counters content">
+        <h2>Quality Assurance</h2>
+        <div class="counter-grid">
+            <div class="counter-card counter-card-n1">
+                <h2>ISO Certification</h2>
+                <p>We are proud to be an ISO 9001:2015 certified organization, reflecting our dedication to maintaining international quality standards in every aspect of our operations.</p>
+            </div>
+            <div class="counter-card counter-card-n2">
+                <h2>Testing Parameters</h2>
+                <ul>
+                    <li><strong>pH Levels:</strong> Ensuring optimal balance for specific applications.</li>
+                    <li><strong>Composition:</strong> Verified for accuracy and purity.</li>
+                    <li><strong>Efficiency:</strong> Tested for maximum operational effectiveness.</li>
+                    <li><strong>Effectiveness:</strong> Ensuring desired outcomes for diverse industrial and environmental needs.</li>
+                </ul>
+            </div>
+            <div class="counter-card counter-card-n3">
+                <h2>Advanced Inspection Processes</h2>
+                <ul>
+                    <li><strong>Raw Material Testing:</strong> High-grade materials are sourced and examined for compliance with industrial standards.</li>
+                    <li><strong>On-Site Trials:</strong> Conducted at client locations to test the real-world effectiveness of our solutions.</li>
+                    <li><strong>Final Quality Checks:</strong> Comprehensive evaluations of plants and chemicals before dispatch.</li>
+                </ul>
+            </div>
+            <div class="counter-card counter-card-n4">
+                <h2>Cutting-Edge Technology</h2>
+                <p>Our infrastructure is equipped with advanced tools and machinery that ensure precision in manufacturing and formulation.</p>
+                <div class="equipment-list">
+                    <div class="equipment-item">Cooling Tanks</div>
+                    <div class="equipment-item">Centrifuges</div>
+                    <div class="equipment-item">Reactors</div>
+                    <div class="equipment-item">Filtration Equipment</div>
+                    <div class="equipment-item">Spray Towers</div>
+                </div>
             </div>
         </div>
     </section>
