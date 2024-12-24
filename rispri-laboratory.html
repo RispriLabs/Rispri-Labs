@@ -196,6 +196,55 @@
             margin: 0;
         }
 
+        /* Testing Container */
+
+        .testing-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .testing-class {
+            background: #f9fafc;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .testing-class h2 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+        
+        .testing-class p {
+            color: #7f8c8d;
+            margin-bottom: 1rem;
+        }
+        
+        .testing-grid {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .card {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 1rem;
+            flex: 1 1 calc(33.333% - 1rem);
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card h3 {
+            color: #34495e;
+            margin-bottom: 0.5rem;
+        }
+        
+        .card p {
+            color: #95a5a6;
+        }
+
         @media (max-width: 768px) {
             .footer-links {
             flex-direction: column;
@@ -354,25 +403,51 @@
         </div>
         <h2>Services Offered</h2>
         <div class="services">
-            <div class="card">
-                <h3>Water Testing</h3>
-                <p>Comprehensive analysis of physical, chemical, and biological water quality parameters.</p>
-            </div>
-            <div class="card">
-                <h3>Food Testing</h3>
-                <p>Ensuring the safety and quality of food products with detailed inspections and certifications.</p>
-            </div>
-            <div class="card">
-                <h3>Soil Testing</h3>
-                <p>Accurate assessments for agricultural, construction, and environmental projects.</p>
-            </div>
-            <div class="card">
-                <h3>Ores and Minerals Testing</h3>
-                <p>Advanced analysis of mineral composition and quality for industrial applications.</p>
-            </div>
-            <div class="card">
-                <h3>Construction Materials Testing</h3>
-                <p>Reliable testing services for cement, concrete, and other building materials.</p>
+            <div class="testing-container">
+
+                <!-- Microbiological Testing Section -->
+                <div class="testing-class">
+                    <h2>Microbiological Testing</h2>
+                    <p>Advanced analysis to detect microbial contaminants, ensuring safety, hygiene, and regulatory compliance across industries.</p>
+                    <div class="testing-grid">
+                        <div class="card">
+                            <h3>Water Microbiological Testing</h3>
+                            <p>Examination of water samples for microbial contaminants to ensure safety and compliance with health standards.</p>
+                        </div>
+                        <div class="card">
+                            <h3>Food Microbiological Testing</h3>
+                            <p>Detailed microbial analysis of food products to detect pathogens and prevent contamination risks.</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Chemical Testing Section -->
+                <div class="testing-class">
+                    <h2>Chemical Testing</h2>
+                    <p>Reliable chemical analysis to assess quality, safety, and regulatory adherence in various materials and samples.</p>
+                    <div class="testing-grid">
+                        <div class="card">
+                            <h3>Water Chemical Testing</h3>
+                            <p>Comprehensive chemical analysis of water quality, including toxicity, pH levels, and dissolved substances.</p>
+                        </div>
+                        <div class="card">
+                            <h3>Food Chemical Testing</h3>
+                            <p>Assessment of chemical composition in food products to ensure safety, quality, and compliance with standards.</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Environmental Testing Section -->
+                <div class="testing-class">
+                    <h2>Environmental Testing</h2>
+                    <p>Accurate assessments to evaluate environmental pollutants in air, water, and soil for agricultural, construction, and industrial projects.</p>
+                    <div class="testing-grid">
+                        <div class="card">
+                            <h3>Air Quality Testing</h3>
+                            <p>Monitoring air pollutants to ensure compliance with environmental standards and regulations.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

@@ -435,7 +435,157 @@
             }
         }
 
-    </style>    
+        /* TESTIMONIAL CAROUSEL */
+        /* Testimonials Section Background */
+        .testimonials {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .testimonials-background {
+            background: url('assets/testenomial.png') no-repeat center center/cover;
+            width: 100%;
+            height: 100%;
+            filter: brightness(1.15) contrast(0.4); /* Increased brightness and contrast for a whiter and lighter effect */
+            animation: backgroundSlider 15s infinite linear, glowEffect 2s infinite alternate;
+        }
+
+        /* Section Heading */
+        .testimonials-heading {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2rem;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+            z-index: 2;
+        }
+
+        /* Testimonial Box */
+        .testimonial-box {
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            padding: 1.5rem 2rem;
+            text-align: center;
+            max-width: 600px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+        }
+
+        .testimonial-text {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        /* Logo Box */
+        .testimonial-logo {
+            position: absolute;
+            bottom: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #fff;
+            border-radius: 8px;
+            padding: 0.5rem 1rem;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            z-index: 3;
+        }
+
+        .testimonial-logo img {
+            max-height: 40px;
+            object-fit: contain;
+        }
+
+        /* Background Slider Animation */
+        @keyframes backgroundSlider {
+            0%, 100% {
+            background: url('assets/testenomial.png') no-repeat center center/cover;
+            }
+            33% {
+            background: url('assets/testenomial.png') no-repeat center center/cover;
+            }
+            66% {
+            background: url('assets/testenomial.png') no-repeat center center/cover;
+            }
+        }
+
+        /* Responsive Styles for Testimonials */
+        @media (max-width: 768px) {
+            .testimonials {
+            height: 300px;
+            }
+
+            .testimonials-background {
+            background-size: 150%; /* Zoom in the background image */
+            }
+
+            .testimonials-heading {
+            font-size: 1.5rem;
+            top: 5%;
+            }
+
+            .testimonial-box {
+            top: 60%;
+            padding: 1rem 1.5rem;
+            max-width: 90%;
+            }
+
+            .testimonial-text {
+            font-size: 1rem;
+            }
+
+            .testimonial-logo {
+            bottom: -30px;
+            }
+
+            .testimonial-logo img {
+            max-height: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .testimonials {
+            height: 450px;
+            }
+
+            .testimonials-background {
+            background-size: 130%; /* Zoom in the background image more */
+            }
+
+            .testimonials-heading {
+            font-size: 1.2rem;
+            top: 5%;
+            }
+
+            .testimonial-box {
+            top: 60%;
+            padding: 0.8rem 1rem;
+            max-width: 95%;
+            }
+
+            .testimonial-text {
+            font-size: 0.9rem;
+            }
+
+            .testimonial-logo {
+            bottom: -25px;
+            }
+
+            .testimonial-logo img {
+            max-height: 25px;
+            }
+        }
+
+    </style>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-LH35MN9R84"></script>
@@ -542,6 +692,19 @@
         </div>
     </section>
 
+    <!-- TESTENOMIAL -->
+    <section class="testimonials">
+        <h2 class="testimonials-heading">What Our Customers Speak</h2>
+        <div class="testimonials-background"></div>
+        <div class="testimonial-box">
+            <p class="testimonial-text">
+                "Rispri Labs has been an essential partner in ensuring our environmental compliance. Their expertise and dedication are unparalleled."
+            </p>
+            <div class="testimonial-logo">
+                <img src="https://www.thermaxglobal.com/wp-content/uploads/2019/04/samsung-engineering1.png" alt="Company Logo">
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
 
@@ -580,6 +743,52 @@
             const nav = document.querySelector('nav');
             nav.classList.toggle('nav-active');
         }
+    </script>
+
+    <script>
+                function showTestimonial(index) {
+                    const carousel = document.querySelector('.carousel-inner');
+                    const totalItems = document.querySelectorAll('.carousel-item').length;
+                    if (index >= totalItems) currentIndex = 0;
+                    else if (index < 0) currentIndex = totalItems - 1;
+                    else currentIndex = index;
+                    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+                }
+            </script>
+
+            <script>
+                const testimonials = [
+            {
+                text: "Rispri Labs has been an invaluable partner in addressing our water treatment needs. Their vast range of solutions, combined with deep technical expertise, ensures effective results.",
+                logo: "assets/Jaypee_Group_Logo.svg"
+            },
+            {
+                text: "Their water solutions and services consistently exceeded our expectations. Highly recommended for reliable and effective industrial solutions.",
+                logo: "assets/ClubMahindra-Logo.jpeg"
+            },
+            {
+                text: "Rispri Labs has been an exceptional partner in addressing our water treatment needs. They were always available for any issues and quick in resolving them.",
+                logo: "assets/ramada-logo.png"
+            }
+        ];
+
+        let currentIndex = 0;
+
+        function updateTestimonial() {
+            const testimonialText = document.querySelector('.testimonial-text');
+            const testimonialLogo = document.querySelector('.testimonial-logo img');
+
+            testimonialText.textContent = testimonials[currentIndex].text;
+            testimonialLogo.src = testimonials[currentIndex].logo;
+
+            currentIndex = (currentIndex + 1) % testimonials.length;
+        }
+
+        // Automatic Rotation Every 5 Seconds
+        setInterval(updateTestimonial, 5000);
+
+        // Initial Load
+        updateTestimonial();
     </script>
 </body>
 </html>
