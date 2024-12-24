@@ -59,6 +59,7 @@
         .company-name {
             font-size: 1.5rem;
             font-weight: bold;
+            cursor: pointer;
         }
 
         nav {
@@ -604,7 +605,7 @@
     <div class="top-bar">
         <div class="logo">
             <img src="assets/your-logo.png" alt="Rispri Logo" class="logo-img">
-            <span class="company-name" onclick="window.location.href='index.html'" style="cursor: pointer;">Rispri Labs</span>
+            <span class="company-name" onclick="window.location.href='index.html'">Rispri Labs</span>
         </div>
         <!-- Hamburger Icon -->
         <div class="hamburger" onclick="toggleNav()">
@@ -615,7 +616,7 @@
         <!-- Navigation Links -->
         <nav>
             <a href="index.html">Home</a>
-            <a href="rispri-laboratory.html">Rispri Laboratory</a>
+            <a href="ram-chemical-enterprises.html" class="active">Ram Chemical Enterprises</a>
             <a href="ram-chemical-enterprises.html">Ram Chemical Enterprises</a>
             <a href="aboutus.html">Our Journey</a>
             <a href="blogs.html">Blogs</a>
@@ -786,11 +787,11 @@
     </footer>
 
     <script>
-        function toggleNav() {
-            const nav = document.querySelector('nav');
-            nav.classList.toggle('nav-active');
-        }
-    </script>
+            const toggleNav = () => {
+                const nav = document.querySelector('nav');
+                nav.classList.toggle('nav-active');
+            }
+        </script>
 
     <script>
         // Counter Animation Script
@@ -828,7 +829,7 @@
             {
                 "title": "Water Treatment Accessories",
                 "description": "Essential accessories and components for water treatment systems, ensuring seamless operation, durability, and enhanced performance.",
-                "image": "assets/rce-prod-2.jpg"
+                "image": "assets/rce-prod-2.jpeg"
             }
         ];
     
